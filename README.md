@@ -17,9 +17,9 @@ PySketch uses the following packages:
 
 Since this is a personal project, I wrote this without platform-cross-compatibility in mind or adding crazy amounts of error-handling. All I can say is that it works on my machine running Windows 10. 😅 If you need compatibility for operating systems other than Windows, you'll need to write your own implementation without using the `pywin32` or the `ctypes` module.
 ## Usage
-Place the `pysketch.py` module somewhere where you can access from python and import from. (You'll also need a .ttf font file as default font or text drawing will not work correctly, change the code `_font_file: str = '<your-font-file>.ttf'`)
+Place the `pysketch.py` module somewhere where you can access from python and import from. (You'll also need a .ttf font file as default font or text drawing will not work correctly, change the code at `Line 279: _font_file: str = '<your-font-file>.ttf'` )
 
-Simply create a new python `.py` script following the template below and run your sketch. For examples, check out the [`examples`](examples) folder.
+Once done, simply create a new python `.py` script following the template below and run your sketch. For examples, check out the [`examples`](examples) folder.
 ```python
 from pysketch import *
 
