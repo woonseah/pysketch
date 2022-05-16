@@ -12,11 +12,14 @@ PySketch uses the following packages:
  * ```Pillow/PIL``` for the canvas, drawing tools, font and Tk interface
  * ```pynput``` for capturing inputs from mouse and keyboard
  * ```numpy``` for processing the input image to draw on the screen
+ * ```ctypes``` for getting the display screen size * **(platform-dependent, Windows only)**
  * ```pywin32``` for checking if sketch window is being focused* **(platform-dependent, Windows only)**
 
-Since this is a personal project, I wrote this without platform-cross-compatibility in mind or adding crazy amounts of error-handling. All I can say is that it works on my machine running Windows 10. 😅 If you need compatibility for operating systems other than Windows, you'll need to write your own implementation to check if the sketch window is being focused or not without using the `pywin32` module.
+Since this is a personal project, I wrote this without platform-cross-compatibility in mind or adding crazy amounts of error-handling. All I can say is that it works on my machine running Windows 10. 😅 If you need compatibility for operating systems other than Windows, you'll need to write your own implementation without using the `pywin32` or the `ctypes` module.
 ## Usage
-Place the `pysketch.py` module somewhere where you can access from python and import from. Simply create a new python `.py` script following the template below and run your sketch. For more examples, check out the [`examples`](examples) folder.
+Place the `pysketch.py` module somewhere where you can access from python and import from. (You'll also need a .ttf font file as default font or text drawing will not work correctly, change the code `_font_file: str = '<your-font-file>.ttf'`)
+
+Simply create a new python `.py` script following the template below and run your sketch. For examples, check out the [`examples`](examples) folder.
 ```python
 from pysketch import *
 
@@ -34,12 +37,12 @@ if __name__ == '__main__':
 ### User-defined Functions
  - `setup()` : code here runs once when the program starts
  - `draw()` : code here runs continuously until the program ends
- - `keyPressed()` or `keyPressed(key: str)` : called whenever a key is pressed
- - `keyReleased()` or `keyReleased(key: str)` : called whenever a key is released
- - `mouseMoved()` or `mouseMoved(x: int, y: int)` : called when mouse is moved
- - `mousePressed()` or `mousePressed(button: int)` : called when mouse is pressed
- - `mouseReleased()` or `mouseReleased(button: int)` : called when mouse is released
- - `mouseWheel()` or `mouseWheel(amount: int)` : called when mouse is scrolled
+ - `keyPressed()`/`keyPressed(key: str)` : called whenever a key is pressed
+ - `keyReleased()`/`keyReleased(key: str)` : called whenever a key is released
+ - `mouseMoved()`/`mouseMoved(x: int, y: int)` : called when mouse is moved
+ - `mousePressed()`/`mousePressed(button: int)` : called when mouse is pressed
+ - `mouseReleased()`/`mouseReleased(button: int)` : called when mouse is released
+ - `mouseWheel()`/`mouseWheel(amount: int)` : called when mouse is scrolled
 ### Global Variables (read-only)
 `width`, `height`, `displayWidth`, `displayHeight`, `mouseX`, `mouseY`, `key`, `mouseButton`, `focused`
 ### GUI and System Functions
@@ -58,7 +61,7 @@ if __name__ == '__main__':
  - `background(...)`**^** : clears the sketch canvas with the given input color.
  - `rect(x, y, w, h)` : draws a rectangle with given dimensions on the sketch canvas.
  - `line(x1, y1, x2, y2)` : draws a line between two points on the sketch canvas.
- - `image(img, x, y)` or `image(img, x, y, w, h)` : draws the input Image or numpy array at the given position and dimensions.
+ - `image(img, x, y)`/`image(img, x, y, w, h)` : draws the input Image or numpy array at the given position and dimensions.
  - `textSize(size)` : sets the font text size used when drawing text.
  - `text(string, x, y)` : draws the input text at the given position in the sketch canvas.
 
