@@ -1,11 +1,6 @@
 # pysketch
 Processing-like sketch programs but for Python projects **(on Windows)***
 
-## Background
-I have been using Processing 3 (Java) to write my programming projects for quite some time but started facing problems with importing external `.jar` libraries which my project requires into the Processing environment. I could switch to using Eclipse IDE and write the Java program from scratch but the whole point of using Processing was to avoid this. ~~(PTSD of slow compiles, missing imports and frozen windows)~~
-
-At this point, I switched to using python for my programming projects as I found it really easy to install packages using `pip`. However, after switching to python, I missed having the simplicity of only having setup() and draw() functions, and everything else running by itself like magic. GUI packages like Tkinter are powerful but a little too complex to setup, eating up precious development time for me. With this idea in mind, I wrote this `pysketch` project to help with development time when working with python.
-
 ## Dependencies
 PySketch uses the following packages:
  * ```tkinter``` as the sketch GUI Window
@@ -67,6 +62,12 @@ if __name__ == '__main__':
 
 
 **^accepted arguments :**  `<function>(gray)`, `<function>(gray, alpha)`, `<function>(r, g, b)`, or `<function>(r, g, b, alpha)`
+
+## Why?
+I have been using Processing 3 (Java) to write my programming projects for quite some time but started facing problems with importing external `.jar` libraries which my project requires into the Processing environment. I could switch to using Eclipse IDE and write the Java program from scratch but the whole point of using Processing was to avoid this. ~~(PTSD of Eclipse slow compiles and missing imports)~~
+
+At this point, I switched to using python for my programming projects as I found it really easy to install packages using `pip`. However, after switching to python, I missed having the simplicity of only having setup() and draw() functions, and everything else running by itself like magic. GUI packages like Tkinter are powerful but a little too complex to setup, eating up precious development time for me. With this idea in mind, I wrote this `pysketch` project to help with development time when working with python.
+
 ## Contributing
 Pull requests are welcome!
 
