@@ -8,7 +8,7 @@ At this point, I switched to using python for my programming projects as I found
 
 ## Dependencies
 PySketch uses the following packages:
- * ```tkinter  ``` as the sketch GUI Window
+ * ```tkinter``` as the sketch GUI Window
  * ```Pillow/PIL``` for the canvas, drawing tools, font and Tk interface
  * ```pynput``` for capturing inputs from mouse and keyboard
  * ```numpy``` for processing the input image to draw on the screen
