@@ -12,7 +12,7 @@ PySketch uses the following packages:
  * ```Pillow/PIL``` for the canvas, drawing tools, font and Tk interface
  * ```pynput``` for capturing inputs from mouse and keyboard
  * ```numpy``` for processing the input image to draw on the screen
- * ```ctypes``` for getting the display screen size * **(platform-dependent, Windows only)**
+ * ```ctypes``` for getting the display screen size* **(platform-dependent, Windows only)**
  * ```pywin32``` for checking if sketch window is being focused* **(platform-dependent, Windows only)**
 
 Since this is a personal project, I wrote this without platform-cross-compatibility in mind or adding crazy amounts of error-handling. All I can say is that it works on my machine running Windows 10. 😅 If you need compatibility for operating systems other than Windows, you'll need to write your own implementation without using the `pywin32` or the `ctypes` module.
