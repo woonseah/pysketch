@@ -68,7 +68,7 @@ I have been using Processing 3 (Java) to write my programming projects for quite
 
 At this point, I switched to using python for my programming projects as I found it really easy to install packages using `pip`. However, after switching to python, I missed having the simplicity of only having setup() and draw() functions, and everything else running by itself like magic. GUI packages like Tkinter are powerful but a little too complex to setup, eating up precious development time for me. With this idea in mind, I wrote this `pysketch` project to help with development time when working with python.
 
-Side Note: Also why not use `pyprocessing`? Uhh... good point. Haha. (I have no idea how to use that 😑)
+Side Note: Also why not use `pyprocessing`? Uhh... good point. Haha. (I have no idea how to use/install that 😑)
 ## Contributing
 Pull requests are welcome!
 
