@@ -1,4 +1,4 @@
-# pysketch
+# pysketch (still a work in progress)
 Processing-like sketch programs but for Python projects **(on Windows)***
 
 ## Dependencies
